@@ -4,17 +4,17 @@ Examples:
 
     ; Create a basic thing
     (define-thing color
-		  [red 0]
-			[green 0]
-			[blue 0])
+      [red 0]
+      [green 0]
+      [blue 0])
     
     ; Extend things
-		(define-thing red color
+    (define-thing red color
       [red 255])
     
     ; Get values, with optional default
     (thing-get red 'red) => 255
-		(thing-get red 'orange) => *error*
+    (thing-get red 'orange) => *error*
     (thing-get red 'orange 9001) => 9001
     
     ; Set value, existing or not
