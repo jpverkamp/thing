@@ -1,9 +1,11 @@
 #lang racket/base
 
-(provide make-thing
-         thing-get
-         thing-set!
-         thing-call)
+(provide 
+  define-thing
+  make-thing			
+  thing-get
+  thing-set!
+  thing-call)
 
 (module+ test
   (require rackunit)
@@ -65,6 +67,10 @@
     (make-thing critter
       [(say name) (format "~a says hello world!" name)]))
   (check-true (thing? talking-critter)))
+
+; Shortcut to define a thing
+(define-syntax-rule (define-thing name arg* ...)
+  (define name (make-thing arg* ...)))
 
 ; Access a value from a thing
 (define (thing-get thing key [default (void)])
