@@ -20,12 +20,6 @@ This package provides a prototype object-based system for Racket.
 
 @section{Functions}
 
-define-thing
-make-thing			
-thing-get
-thing-set!
-thing-call
-
 @defproc[(make-thing 
            [base thing? void] 
            [kv (or/c (List symbol? any ...)
@@ -76,7 +70,7 @@ thing-call
 @section{Examples}
 
 @interaction[
-(require "thing.rkt")
+(require "thing/main.rkt")
 
 ; Create a basic thing
 (define-thing color
