@@ -1,3 +1,7 @@
+To install:
+
+    raco pkg install github://github.com/jpverkamp/thing/master
+
 A prototype based object system for Racket
 
 Examples:
