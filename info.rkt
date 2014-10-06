@@ -4,7 +4,7 @@
 (define scribblings '(("manual.scrbl" ())))
 
 (define blurb '("Prototype-based object system for Racket."))
-(define primary-file "thing/main.rkt")
+(define primary-file "main.rkt")
 (define homepage "https://github.com/jpverkamp/thing/")
 
 (define version "1.0")
